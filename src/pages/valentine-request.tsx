@@ -6,7 +6,7 @@ const LAYOUT_CONTENT = {
   message: 'Katusha, will you respectuflly be my Valentine?',
   description: "This is a unique opportunity to share love with your beloved Bernardinho Crocodinho.",
   chips: ['❤ Made with love', 'Valentine 2026', 'For Katusha', 'Aka Kateronička'],
-  requirements: ['Are you my girlfriend?', 'Do you love me?', 'Wanna have fun together?', 'Are you my crazy lady?'],
+  requirements: ['Are you the best Girlfriend?', 'Loves me', 'Wanna have fun'],
   tipsTitle: 'Little love tips',
   tips: [
     'Acting special works very well with me',
