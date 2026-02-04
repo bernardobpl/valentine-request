@@ -81,7 +81,7 @@ export const RunAwayButton = ({ initialLeft = INITIAL_LEFT, initialTop = INITIAL
     const container = document.getElementById('root')
     if (!container) return
     rootRef.current = container as HTMLDivElement
-    setReady(true) // eslint-disable-line
+    setReady(true)  
     container.addEventListener('mousemove', onMouseMove)
     return () => {
       container.removeEventListener('mousemove', onMouseMove)
@@ -92,9 +92,9 @@ export const RunAwayButton = ({ initialLeft = INITIAL_LEFT, initialTop = INITIAL
     alert('Oh noo! Seems like this one is also bugged')
   }
   
-  useEffect(() => {
-    if (ready) {
-      createPortal(
+  return (
+    <>
+      {ready && rootRef.current && createPortal( // eslint-disable-line
         <button
           ref={buttonRef}
           type="button"
@@ -103,10 +103,8 @@ export const RunAwayButton = ({ initialLeft = INITIAL_LEFT, initialTop = INITIAL
           onClick={handleClick}
         >
           Decline
-        </button>
-      , document.body)
-    }
-  }, [ready, position])
-
-  return null
+        </button>, 
+      rootRef.current)} {/* eslint-disable-line */}
+    </>
+  )
 }
