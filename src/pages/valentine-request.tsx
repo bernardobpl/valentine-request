@@ -6,7 +6,7 @@ const LAYOUT_CONTENT = {
   message: 'Katusha, will you respectuflly be my Valentine?',
   description: "This is a unique opportunity to share love with your beloved Bernardinho Crocodinho.",
   chips: ['❤ Made with love', 'Valentine 2026', 'For Katusha', 'Aka Kateronička'],
-  requirements: ['Are you the best Girlfriend?', 'Loves me', 'Wanna have fun'],
+  requirements: ['Behave like my baby', 'Loves me', 'Wanna have fun'],
   tipsTitle: 'Little love tips',
   tips: [
     'Acting special works very well with me',
@@ -87,7 +87,7 @@ export const ValentineRequest = () => {
               <ul>
                 {LAYOUT_CONTENT.requirements.map((requirement) => (
                   <li key={requirement} className="flex items-center gap-2">
-                    <input type="checkbox" checked={acceptedRequirements.includes(requirement)} onChange={() => handleToggleRequirement(requirement)} />
+                    <input className="cursor-pointer w-5 h-5" type="checkbox" checked={acceptedRequirements.includes(requirement)} onChange={() => handleToggleRequirement(requirement)} />
                     <label>{requirement}</label>
                   </li>
                 ))}
